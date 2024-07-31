@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Search</title>
+    <link rel="stylesheet" href="secondpage.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button class="collapse-button" onclick="toggleSidebar()">X</button>
+            <h2>Search</h2>
+            <div class="search-section">
+                <label for="platform">Search by Platform</label>
+                <select id="platform">
+                    <option value="all">All</option>
+                    <option value="Media">Media</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Youtube">Youtube</option>
+                </select>
+            </div>
+            <div class="search-section">
+                <label for="date-from">Search by Date</label>
+                <input type="date" id="date-from" placeholder="YYYY/MM/DD">
+                <input type="date" id="date-to" placeholder="YYYY/MM/DD">
+            </div>
+            <div class="search-section">
+                <label for="keyword">Search by Keyword</label>
+                <input type="text" id="keyword" placeholder="Enter keyword">
+            </div>
+            <div class="search-buttons">
+                <button onclick="search()">Search</button>
+                <button onclick="reset()">Reset</button>
+            </div>
+            <div class="logout">
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+        <p class="wired">Wired</p>
+        <div class="main-content">
+            <button class="toggle-sidebar" onclick="toggleSidebar()">&#9776; Search</button> 
+            <div class="table-container">
+                <table class="table" id="dataTable">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="pagination-buttons">
+        <button id="prevPage" onclick="previous()">Previous</button>
+        <div class="pagination-pages"></div>
+        <button id="nextPage" onclick="next()">Next</button>
+    </div>
+
+    <script src="secondpage.js"></script>
+</body>
+</html>
