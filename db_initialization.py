@@ -23,7 +23,7 @@ def connect_to_database():
     try:
         # Establish a connection to PostgreSQL
         conn = psycopg2.connect(
-            database="backupdb",
+            database="backupDB",
             user="user_1",
             host="localhost",
             password="loginpage",
